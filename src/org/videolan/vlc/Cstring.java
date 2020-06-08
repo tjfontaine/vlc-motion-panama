@@ -3,7 +3,6 @@ package org.videolan.vlc;
 
 import java.lang.invoke.VarHandle;
 import java.nio.charset.Charset;
-import jdk.incubator.foreign.NativeAllocationScope;
 import jdk.incubator.foreign.MemoryAddress;
 import jdk.incubator.foreign.MemoryLayout;
 import jdk.incubator.foreign.MemorySegment;
@@ -28,7 +27,7 @@ public final class Cstring {
         return segment;
     }
 
-    private static MemoryAddress toCString(byte[] bytes, NativeAllocationScope scope) {
+    private static MemoryAddress toCString(byte[] bytes, CScope scope) {
         MemoryLayout strLayout = MemoryLayout.ofSequence(bytes.length + 1, C_CHAR);
         MemoryAddress addr = scope.allocate(strLayout);
         addr.segment().copyFrom(MemorySegment.ofArray(bytes));
@@ -60,25 +59,36 @@ public final class Cstring {
          return toCString(str.getBytes(charset));
     }
 
-    public static MemoryAddress toCString(String str, NativeAllocationScope scope) {
+    public static MemoryAddress toCString(String str, CScope scope) {
         return toCString(str.getBytes(), scope);
     }
 
-    public static MemoryAddress toCString(String str, Charset charset, NativeAllocationScope scope) {
+    public static MemoryAddress toCString(String str, Charset charset, CScope scope) {
         return toCString(str.getBytes(charset), scope);
     }
 
-    public static String toJavaString(MemoryAddress addr) {
-        StringBuilder buf = new StringBuilder();
+    public static String toJavaStringRestricted(MemoryAddress addr) {
         MemoryAddress baseAddr = addr.segment() != null ?
                 addr :
                 MemorySegment.ofNativeRestricted(addr, Long.MAX_VALUE, Thread.currentThread(),
                         null, null).baseAddress();
-        byte curr = (byte) byteArrHandle.get(baseAddr, 0);
+        return readString(baseAddr);
+    }
+
+    public static String toJavaString(MemoryAddress addr) {
+        if (addr.segment() == null) {
+            throw new IllegalArgumentException("no underlying segment for the address");
+        }
+        return readString(addr);
+    }
+
+    private static String readString(MemoryAddress addr) {
+        StringBuilder buf = new StringBuilder();
+        byte curr = (byte) byteArrHandle.get(addr, 0);
         long offset = 0;
         while (curr != 0) {
             buf.append((char) curr);
-            curr = (byte) byteArrHandle.get(baseAddr, ++offset);
+            curr = (byte) byteArrHandle.get(addr, ++offset);
         }
         return buf.toString();
     }

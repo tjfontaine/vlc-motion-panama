@@ -24,9 +24,17 @@ public class Cdouble {
     private static final VarHandle handle = LAYOUT.varHandle(CARRIER);
     private static final VarHandle arrayHandle = arrayHandle(LAYOUT, CARRIER);
 
-    public static MemoryAddress asArray(MemoryAddress addr, int numElements) {
+    public static MemoryAddress asArrayRestricted(MemoryAddress addr, int numElements) {
         return MemorySegment.ofNativeRestricted(addr, numElements * LAYOUT.byteSize(),
                Thread.currentThread(), null, null).baseAddress();
+    }
+
+    public static MemoryAddress asArray(MemoryAddress addr, int numElements) {
+        var seg = addr.segment();
+        if (seg == null) {
+            throw new IllegalArgumentException("no underlying segment for the address");
+        }
+        return seg.asSlice(addr.segmentOffset(), numElements * LAYOUT.byteSize()).baseAddress();
     }
 
     public static double get(MemoryAddress addr) {
@@ -51,7 +59,7 @@ public class Cdouble {
         return seg;
     }
 
-    public static MemoryAddress allocate(double value, NativeAllocationScope scope) {
+    public static MemoryAddress allocate(double value, CScope scope) {
         var addr = scope.allocate(LAYOUT);
         handle.set(addr, value);
         return addr;
@@ -62,7 +70,7 @@ public class Cdouble {
         return MemorySegment.allocateNative(arrLayout);
     }
 
-    public static MemoryAddress allocateArray(int length, NativeAllocationScope scope) {
+    public static MemoryAddress allocateArray(int length, CScope scope) {
         var arrLayout = MemoryLayout.ofSequence(length, LAYOUT);
         return scope.allocate(arrLayout);
     }
@@ -74,7 +82,7 @@ public class Cdouble {
         return seg;
     }
 
-    public static MemoryAddress allocateArray(double[] arr, NativeAllocationScope scope) {
+    public static MemoryAddress allocateArray(double[] arr, CScope scope) {
         var arrLayout = MemoryLayout.ofSequence(arr.length, LAYOUT);
         var addr = scope.allocate(arrLayout);
         addr.segment().copyFrom(MemorySegment.ofArray(arr));

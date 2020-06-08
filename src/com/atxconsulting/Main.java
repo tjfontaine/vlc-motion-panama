@@ -4,7 +4,7 @@ import jdk.incubator.foreign.MemoryAddress;
 import org.videolan.vlc.Cint;
 import org.videolan.vlc.Cpointer;
 import org.videolan.vlc.Cstring;
-import org.videolan.vlc.RuntimeHelper.CScope;
+import org.videolan.vlc.CScope;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -232,54 +232,46 @@ public class Main {
 
         public void videoCallbacks(VLCVideoLockCB lock, VLCVideoUnlockCB unlock, VLCVideoDisplayCB display) {
             var lock_cb = libvlc_video_set_callbacks$lock.allocate((opaque_in, planes_in) -> {
-                var ret = lock.apply(Cpointer.asArray(planes_in, 3));
+                var ret = lock.apply(Cpointer.asArrayRestricted(planes_in, 3));
                 return MemoryAddress.ofLong(ret);
-            });
-            this.scope.register(lock_cb);
+            }, scope);
 
             var unlock_cb = NULL;
             if (unlock != null) {
-                var cb = libvlc_video_set_callbacks$unlock.allocate((opaque_in, picture_in, planes_in) -> {
+                unlock_cb = libvlc_video_set_callbacks$unlock.allocate((opaque_in, picture_in, planes_in) -> {
                     unlock.apply(picture_in.toRawLongValue(), planes_in);
-                });
-                scope.register(cb);
-                unlock_cb = cb.baseAddress();
+                }, scope);
             }
 
             var display_cb = NULL;
             if (display != null) {
-                var cb = libvlc_video_set_callbacks$display.allocate((opaque_in, picture_in) -> {
+                display_cb = libvlc_video_set_callbacks$display.allocate((opaque_in, picture_in) -> {
                     display.apply(picture_in.toRawLongValue());
-                });
-                scope.register(cb);
-                display_cb = cb.baseAddress();
+                }, scope);
             }
 
-            libvlc_video_set_callbacks(this.pMediaPlayer, lock_cb.baseAddress(), unlock_cb, display_cb, NULL);
+            libvlc_video_set_callbacks(this.pMediaPlayer, lock_cb, unlock_cb, display_cb, NULL);
         }
 
         public void formatCallbacks(VLCFormatSetupCB setup, VLCFormatCleanupCB cleanup) {
             var setup_cb = libvlc_video_set_format_callbacks$setup.allocate((opaque, chroma, width, height, pitches, lines) -> {
-                var c = new InOutVar<String>(Cpointer.asArray(chroma, 1), scope, Cstring::copy, Cstring::toJavaString);
-                var w = new InOutVar<Integer>(Cint.asArray(width, 1), scope, Cint::set, Cint::get);
-                var h = new InOutVar<Integer>(Cint.asArray(height, 1), scope, Cint::set, Cint::get);
-                var p = new OutVar<Integer>(Cint.asArray(pitches, 1), scope, Cint::set);
-                var l = new OutVar<Integer>(Cint.asArray(lines, 1), scope, Cint::set);
+                var c = new InOutVar<String>(Cpointer.asArrayRestricted(chroma, 1), scope, Cstring::copy, Cstring::toJavaString);
+                var w = new InOutVar<Integer>(Cint.asArrayRestricted(width, 1), scope, Cint::set, Cint::get);
+                var h = new InOutVar<Integer>(Cint.asArrayRestricted(height, 1), scope, Cint::set, Cint::get);
+                var p = new OutVar<Integer>(Cint.asArrayRestricted(pitches, 1), scope, Cint::set);
+                var l = new OutVar<Integer>(Cint.asArrayRestricted(lines, 1), scope, Cint::set);
                 var ret = setup.apply(c, w, h, p, l);
                 return ret;
-            });
-            scope.register(setup_cb);
+            }, scope);
 
             var cleanup_cb = NULL;
             if (cleanup != null) {
-                var cb = libvlc_video_set_format_callbacks$cleanup.allocate((opaque) -> {
+                cleanup_cb = libvlc_video_set_format_callbacks$cleanup.allocate((opaque) -> {
                     cleanup.apply();
-                });
-                scope.register(cb);
-                cleanup_cb = cb.baseAddress();
+                }, scope);
             }
 
-            libvlc_video_set_format_callbacks(this.pMediaPlayer, setup_cb.baseAddress(), cleanup_cb);
+            libvlc_video_set_format_callbacks(this.pMediaPlayer, setup_cb, cleanup_cb);
         }
 
         public static VLCMediaPlayer fromMedia(VLCMedia media) {
