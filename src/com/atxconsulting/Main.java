@@ -1,10 +1,10 @@
 package com.atxconsulting;
 
 import jdk.incubator.foreign.MemoryAddress;
+import jdk.incubator.foreign.NativeScope;
 import org.videolan.vlc.Cint;
 import org.videolan.vlc.Cpointer;
 import org.videolan.vlc.Cstring;
-import org.videolan.vlc.CScope;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,7 +17,7 @@ import static org.videolan.vlc.vlc_h.*;
 
 public class Main {
     public static void main(String[] args) {
-        try (var scope = new CScope();
+        try (var scope = NativeScope.unboundedScope();
              var vlcInstance = VLCInstance.Builder()
                      .withArgs(Arrays.asList("--intf", "dummy",
                              "--repeat",
@@ -86,10 +86,10 @@ public class Main {
     public static class OutVar<T> {
         MemoryAddress foreignValue;
         boolean dirty = false;
-        CScope scope;
+        NativeScope scope;
         Settable<T> settable;
 
-        OutVar(MemoryAddress fval, CScope scope, Settable<T> settable) {
+        OutVar(MemoryAddress fval, NativeScope scope, Settable<T> settable) {
             foreignValue = fval;
             this.scope = scope;
             this.settable = settable;
@@ -103,7 +103,7 @@ public class Main {
     public static class InOutVar<T> extends OutVar<T> {
         Gettable<T> gettable;
 
-        InOutVar(MemoryAddress fval, CScope scope, Settable<T> settable, Gettable<T> gettable) {
+        InOutVar(MemoryAddress fval, NativeScope scope, Settable<T> settable, Gettable<T> gettable) {
             super(fval, scope, settable);
             this.gettable = gettable;
         }
@@ -115,9 +115,9 @@ public class Main {
 
     public static class VLCInstance implements AutoCloseable {
         MemoryAddress pInstance;
-        CScope scope;
+        NativeScope scope;
 
-        VLCInstance(List<String> args, CScope scope) {
+        VLCInstance(List<String> args, NativeScope scope) {
             this.scope = scope;
             var ptrvlcArgs = Cpointer.allocateArray(args.size(), scope);
             for (var i = 0; i < args.size(); i++) {
@@ -145,7 +145,7 @@ public class Main {
 
         public static final class VBuilder {
             ArrayList<String> args = new ArrayList<String>();
-            CScope scope;
+            NativeScope scope;
 
             public VBuilder withArg(String arg) {
                 args.add(arg);
@@ -157,7 +157,7 @@ public class Main {
                 return this;
             }
 
-            public VBuilder withScope(CScope scope) {
+            public VBuilder withScope(NativeScope scope) {
                 this.scope = scope;
                 return this;
             }
@@ -172,9 +172,9 @@ public class Main {
 
     public static final class VLCMedia implements AutoCloseable {
         MemoryAddress pMedia;
-        CScope scope;
+        NativeScope scope;
 
-        VLCMedia(MemoryAddress ptr, CScope scope) {
+        VLCMedia(MemoryAddress ptr, NativeScope scope) {
             this.pMedia = ptr;
             this.scope = scope;
         }
@@ -203,9 +203,9 @@ public class Main {
 
     public static final class VLCMediaPlayer implements AutoCloseable {
         MemoryAddress pMediaPlayer;
-        CScope scope;
+        NativeScope scope;
 
-        VLCMediaPlayer(MemoryAddress ptr, CScope scope) {
+        VLCMediaPlayer(MemoryAddress ptr, NativeScope scope) {
             this.pMediaPlayer = ptr;
             this.scope = scope;
         }

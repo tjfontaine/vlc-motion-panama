@@ -1787,7 +1787,7 @@ public final class vlc_h {
         public static MemorySegment allocate(funopen$x0 fi) {
             return RuntimeHelper.upcallStub(funopen$x0.class, fi, vlc_h$constants.funopen$x0$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;I)I");
         }
-        public static MemoryAddress allocate(funopen$x0 fi, CScope scope) {
+        public static MemoryAddress allocate(funopen$x0 fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -1796,7 +1796,7 @@ public final class vlc_h {
         public static MemorySegment allocate(funopen$x1 fi) {
             return RuntimeHelper.upcallStub(funopen$x1.class, fi, vlc_h$constants.funopen$x1$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;I)I");
         }
-        public static MemoryAddress allocate(funopen$x1 fi, CScope scope) {
+        public static MemoryAddress allocate(funopen$x1 fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -1805,7 +1805,7 @@ public final class vlc_h {
         public static MemorySegment allocate(funopen$x2 fi) {
             return RuntimeHelper.upcallStub(funopen$x2.class, fi, vlc_h$constants.funopen$x2$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;JI)J");
         }
-        public static MemoryAddress allocate(funopen$x2 fi, CScope scope) {
+        public static MemoryAddress allocate(funopen$x2 fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -1814,7 +1814,7 @@ public final class vlc_h {
         public static MemorySegment allocate(funopen$x3 fi) {
             return RuntimeHelper.upcallStub(funopen$x3.class, fi, vlc_h$constants.funopen$x3$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;)I");
         }
-        public static MemoryAddress allocate(funopen$x3 fi, CScope scope) {
+        public static MemoryAddress allocate(funopen$x3 fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -1977,7 +1977,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_set_exit_handler$cb fi) {
             return RuntimeHelper.upcallStub(libvlc_set_exit_handler$cb.class, fi, vlc_h$constants.libvlc_set_exit_handler$cb$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;)V");
         }
-        public static MemoryAddress allocate(libvlc_set_exit_handler$cb fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_set_exit_handler$cb fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -2059,7 +2059,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_event_attach$f_callback fi) {
             return RuntimeHelper.upcallStub(libvlc_event_attach$f_callback.class, fi, vlc_h$constants.libvlc_event_attach$f_callback$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;)V");
         }
-        public static MemoryAddress allocate(libvlc_event_attach$f_callback fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_event_attach$f_callback fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -2078,7 +2078,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_event_detach$f_callback fi) {
             return RuntimeHelper.upcallStub(libvlc_event_detach$f_callback.class, fi, vlc_h$constants.libvlc_event_detach$f_callback$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;)V");
         }
-        public static MemoryAddress allocate(libvlc_event_detach$f_callback fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_event_detach$f_callback fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -2149,7 +2149,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_log_set$cb fi) {
             return RuntimeHelper.upcallStub(libvlc_log_set$cb.class, fi, vlc_h$constants.libvlc_log_set$cb$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;ILjdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;)V");
         }
-        public static MemoryAddress allocate(libvlc_log_set$cb fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_log_set$cb fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -2592,7 +2592,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_media_new_callbacks$open_cb fi) {
             return RuntimeHelper.upcallStub(libvlc_media_new_callbacks$open_cb.class, fi, vlc_h$constants.libvlc_media_new_callbacks$open_cb$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;)I");
         }
-        public static MemoryAddress allocate(libvlc_media_new_callbacks$open_cb fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_media_new_callbacks$open_cb fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -2601,7 +2601,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_media_new_callbacks$read_cb fi) {
             return RuntimeHelper.upcallStub(libvlc_media_new_callbacks$read_cb.class, fi, vlc_h$constants.libvlc_media_new_callbacks$read_cb$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;J)J");
         }
-        public static MemoryAddress allocate(libvlc_media_new_callbacks$read_cb fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_media_new_callbacks$read_cb fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -2610,7 +2610,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_media_new_callbacks$seek_cb fi) {
             return RuntimeHelper.upcallStub(libvlc_media_new_callbacks$seek_cb.class, fi, vlc_h$constants.libvlc_media_new_callbacks$seek_cb$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;J)I");
         }
-        public static MemoryAddress allocate(libvlc_media_new_callbacks$seek_cb fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_media_new_callbacks$seek_cb fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -2619,7 +2619,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_media_new_callbacks$close_cb fi) {
             return RuntimeHelper.upcallStub(libvlc_media_new_callbacks$close_cb.class, fi, vlc_h$constants.libvlc_media_new_callbacks$close_cb$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;)V");
         }
-        public static MemoryAddress allocate(libvlc_media_new_callbacks$close_cb fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_media_new_callbacks$close_cb fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -3147,7 +3147,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_video_set_callbacks$lock fi) {
             return RuntimeHelper.upcallStub(libvlc_video_set_callbacks$lock.class, fi, vlc_h$constants.libvlc_video_set_callbacks$lock$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;)Ljdk/incubator/foreign/MemoryAddress;");
         }
-        public static MemoryAddress allocate(libvlc_video_set_callbacks$lock fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_video_set_callbacks$lock fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -3156,7 +3156,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_video_set_callbacks$unlock fi) {
             return RuntimeHelper.upcallStub(libvlc_video_set_callbacks$unlock.class, fi, vlc_h$constants.libvlc_video_set_callbacks$unlock$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;)V");
         }
-        public static MemoryAddress allocate(libvlc_video_set_callbacks$unlock fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_video_set_callbacks$unlock fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -3165,7 +3165,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_video_set_callbacks$display fi) {
             return RuntimeHelper.upcallStub(libvlc_video_set_callbacks$display.class, fi, vlc_h$constants.libvlc_video_set_callbacks$display$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;)V");
         }
-        public static MemoryAddress allocate(libvlc_video_set_callbacks$display fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_video_set_callbacks$display fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -3194,7 +3194,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_video_set_format_callbacks$setup fi) {
             return RuntimeHelper.upcallStub(libvlc_video_set_format_callbacks$setup.class, fi, vlc_h$constants.libvlc_video_set_format_callbacks$setup$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;)I");
         }
-        public static MemoryAddress allocate(libvlc_video_set_format_callbacks$setup fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_video_set_format_callbacks$setup fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -3203,7 +3203,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_video_set_format_callbacks$cleanup fi) {
             return RuntimeHelper.upcallStub(libvlc_video_set_format_callbacks$cleanup.class, fi, vlc_h$constants.libvlc_video_set_format_callbacks$cleanup$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;)V");
         }
-        public static MemoryAddress allocate(libvlc_video_set_format_callbacks$cleanup fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_video_set_format_callbacks$cleanup fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -3302,7 +3302,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_audio_set_callbacks$play fi) {
             return RuntimeHelper.upcallStub(libvlc_audio_set_callbacks$play.class, fi, vlc_h$constants.libvlc_audio_set_callbacks$play$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;IJ)V");
         }
-        public static MemoryAddress allocate(libvlc_audio_set_callbacks$play fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_audio_set_callbacks$play fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -3311,7 +3311,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_audio_set_callbacks$pause fi) {
             return RuntimeHelper.upcallStub(libvlc_audio_set_callbacks$pause.class, fi, vlc_h$constants.libvlc_audio_set_callbacks$pause$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;J)V");
         }
-        public static MemoryAddress allocate(libvlc_audio_set_callbacks$pause fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_audio_set_callbacks$pause fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -3320,7 +3320,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_audio_set_callbacks$resume fi) {
             return RuntimeHelper.upcallStub(libvlc_audio_set_callbacks$resume.class, fi, vlc_h$constants.libvlc_audio_set_callbacks$resume$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;J)V");
         }
-        public static MemoryAddress allocate(libvlc_audio_set_callbacks$resume fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_audio_set_callbacks$resume fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -3329,7 +3329,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_audio_set_callbacks$flush fi) {
             return RuntimeHelper.upcallStub(libvlc_audio_set_callbacks$flush.class, fi, vlc_h$constants.libvlc_audio_set_callbacks$flush$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;J)V");
         }
-        public static MemoryAddress allocate(libvlc_audio_set_callbacks$flush fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_audio_set_callbacks$flush fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -3338,7 +3338,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_audio_set_callbacks$drain fi) {
             return RuntimeHelper.upcallStub(libvlc_audio_set_callbacks$drain.class, fi, vlc_h$constants.libvlc_audio_set_callbacks$drain$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;)V");
         }
-        public static MemoryAddress allocate(libvlc_audio_set_callbacks$drain fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_audio_set_callbacks$drain fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -3357,7 +3357,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_audio_set_volume_callback$set_volume fi) {
             return RuntimeHelper.upcallStub(libvlc_audio_set_volume_callback$set_volume.class, fi, vlc_h$constants.libvlc_audio_set_volume_callback$set_volume$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;FB)V");
         }
-        public static MemoryAddress allocate(libvlc_audio_set_volume_callback$set_volume fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_audio_set_volume_callback$set_volume fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -3376,7 +3376,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_audio_set_format_callbacks$setup fi) {
             return RuntimeHelper.upcallStub(libvlc_audio_set_format_callbacks$setup.class, fi, vlc_h$constants.libvlc_audio_set_format_callbacks$setup$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;)I");
         }
-        public static MemoryAddress allocate(libvlc_audio_set_format_callbacks$setup fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_audio_set_format_callbacks$setup fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -3385,7 +3385,7 @@ public final class vlc_h {
         public static MemorySegment allocate(libvlc_audio_set_format_callbacks$cleanup fi) {
             return RuntimeHelper.upcallStub(libvlc_audio_set_format_callbacks$cleanup.class, fi, vlc_h$constants.libvlc_audio_set_format_callbacks$cleanup$DESC(), "(Ljdk/incubator/foreign/MemoryAddress;)V");
         }
-        public static MemoryAddress allocate(libvlc_audio_set_format_callbacks$cleanup fi, CScope scope) {
+        public static MemoryAddress allocate(libvlc_audio_set_format_callbacks$cleanup fi, NativeScope scope) {
             return scope.register(allocate(fi)).baseAddress();
         }
     }
@@ -5904,10 +5904,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -5937,10 +5937,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -5952,10 +5952,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -5985,10 +5985,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -6018,10 +6018,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -6051,10 +6051,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -6084,10 +6084,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -6117,10 +6117,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -6150,10 +6150,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -6183,10 +6183,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -6216,10 +6216,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -6249,10 +6249,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -6279,10 +6279,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -6429,10 +6429,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -6444,10 +6444,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -6459,10 +6459,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -6699,10 +6699,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -6792,10 +6792,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -6837,10 +6837,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -6912,10 +6912,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -7050,10 +7050,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -7065,10 +7065,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -7185,10 +7185,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -7230,10 +7230,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -7260,10 +7260,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -7305,10 +7305,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -7350,10 +7350,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -7365,10 +7365,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -7380,10 +7380,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -7410,10 +7410,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -7443,10 +7443,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -7458,10 +7458,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
@@ -7488,10 +7488,10 @@ public final class vlc_h {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate() { return MemorySegment.allocateNative($LAYOUT()); }
-        public static MemoryAddress allocate(NativeAllocationScope scope) { return scope.allocate($LAYOUT()); }
+        public static MemoryAddress allocate(NativeScope scope) { return scope.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len) {
             return MemorySegment.allocateNative(MemoryLayout.ofSequence(len, $LAYOUT()));}
-        public static MemoryAddress allocateArray(int len, NativeAllocationScope scope) {
+        public static MemoryAddress allocateArray(int len, NativeScope scope) {
             return scope.allocate(MemoryLayout.ofSequence(len, $LAYOUT()));}
     }
 
